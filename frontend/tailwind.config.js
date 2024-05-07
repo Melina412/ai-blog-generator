@@ -11,10 +11,10 @@ export default {
     themes: [
       {
         light: {
-          ...require('daisyui/src/theming/themes')['light'],
+          ...require('daisyui/src/theming/themes')['winter'],
         },
         dark: {
-          ...require('daisyui/src/theming/themes')['dark'],
+          ...require('daisyui/src/theming/themes')['night'],
         },
       },
     ],

@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>AI Blog Generator</title>
   </head>
   <body>
     <header>
-      <div class="navbar bg-primary text-primary-content">
+      <div class="navbar bg-primary text-neutral">
         <div class="flex-1">
           <a class="btn btn-ghost text-xl">AI Blog Generator</a>
         </div>
@@ -30,16 +30,44 @@
     </header>
 
     <main class="flex flex-col min-h-screen">
-      <div>
-        <div>
-          <div class="text-center">
-            <h2>Welcome to AI Blog Generator</h2>
+      <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+        <div
+          class="max-w-3xl p-6 rounded-lg bg-neutral shadow-md transition-transform transform hover:scale-105 flex flex-col">
+          <!--$ intro section  -->
+          <section class="text-center mb-6">
+            <h1 class="text-4xl mb-4">Welcome to AI Blog Generator</h1>
             <p>
               Generate high-quality blog articles from YouTube videos using
               artificial intelligence. Simply enter the link to the YouTube
               video below and let the AI create the content for you!
             </p>
-          </div>
+          </section>
+
+          <!--$ youtube section  -->
+          <section class="mb-6">
+            <h2 class="text-xl py-2">Enter Youtube Video Link</h2>
+            <div class="flex space-x-4">
+              <input
+                type="url"
+                id="youtubeLink"
+                placeholder="https://www.youtube.com/watch..."
+                class="flex-grow p-2 rounded-md" />
+              <button id="generateBlog" class="btn btn-primary">
+                Generate
+              </button>
+            </div>
+          </section>
+
+          <!-- $ blog display section  -->
+          <section>
+            <h2 class="text-xl py-2">Generated Blog Article</h2>
+            <div id="blogContent">
+              <!--$ loading circle -->
+              <div id="loadingCircle" style="display: none">
+                <span class="loading loading-dots loading-md"></span>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
