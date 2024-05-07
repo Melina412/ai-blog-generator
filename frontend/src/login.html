@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <title>AI Blog Generator</title>
+    <title>Login</title>
   </head>
   <body>
     <header>
@@ -30,44 +30,34 @@
     </header>
 
     <main class="flex flex-col min-h-screen">
-      <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+      <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0 gap-2">
         <article
-          class="max-w-3xl p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto transition-transform transform hover:scale-105 flex flex-col">
-          <!--$ intro section  -->
-          <section class="text-center mb-6">
-            <h1 class="text-4xl mb-4">Welcome to AI Blog Generator</h1>
-            <p>
-              Generate high-quality blog articles from YouTube videos using
-              artificial intelligence. Simply enter the link to the YouTube
-              video below and let the AI create the content for you!
-            </p>
-          </section>
+          class="max-w-lg p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto">
+          <form action="" class="flex flex-col gap-2">
+            <h2 class="text-xl">Login</h2>
 
-          <!--$ youtube section  -->
-          <section class="mb-6">
-            <h2 class="text-xl py-2">Enter Youtube Video Link</h2>
-            <div class="flex space-x-4">
+            <div class="flex flex-col gap-1">
+              <label for="username">Username</label>
               <input
-                type="url"
-                id="youtubeLink"
-                placeholder="https://www.youtube.com/watch..."
-                class="flex-grow p-2 rounded-md placeholder:text-secondary/30 0" />
-              <button id="generateBlog" class="btn btn-secondary">
-                Generate
-              </button>
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                class="flex-grow p-2 rounded-md placeholder:text-secondary/30" />
             </div>
-          </section>
 
-          <!-- $ blog display section  -->
-          <section>
-            <h2 class="text-xl py-2">Generated Blog Article</h2>
-            <div id="blogContent">
-              <!--$ loading circle -->
-              <div id="loadingCircle" style="display: none">
-                <span class="loading loading-dots loading-md"></span>
-              </div>
+            <div class="flex flex-col gap-1 mb-4">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                class="flex-grow p-2 rounded-md placeholder:text-secondary/30" />
             </div>
-          </section>
+
+            <button type="submit" class="btn btn-secondary">Login</button>
+          </form>
         </article>
       </div>
     </main>
@@ -99,6 +89,3 @@
     </footer>
   </body>
 </html>
-
-<!--# tailwind CLI build command: -->
-<!--# npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
