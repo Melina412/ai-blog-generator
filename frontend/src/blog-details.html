@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style/output.css" rel="stylesheet" />
-    <title>Login</title>
+    <title>Blog Details</title>
   </head>
   <body class="min-h-screen">
     <header class="fixed top-0 w-full">
@@ -31,34 +31,19 @@
 
     <main class="flex flex-col pt-16 pb-14 overflow-hidden">
       <div class="flex-grow container mx-auto mt-10 mb-10 px-4 sm:px-0 gap-2">
-        <article
-          class="max-w-lg p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto">
-          <form action="" class="flex flex-col gap-2">
-            <h2 class="text-xl">Login</h2>
-
-            <div class="flex flex-col gap-1">
-              <label for="username">Username</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Enter your username"
-                class="flex-grow p-2 rounded-md placeholder:text-secondary/30" />
-            </div>
-
-            <div class="flex flex-col gap-1 mb-4">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                class="flex-grow p-2 rounded-md placeholder:text-secondary/30" />
-            </div>
-
-            <button type="submit" class="btn btn-secondary">Login</button>
-          </form>
-        </article>
+        <section
+          class="max-w-3xl p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto">
+          <h1 class="text-3xl pb-3">Blog Post Details</h1>
+          <article class="border border-solid rounded-lg p-2">
+            <h2 class="text-xl pb-3">title</h2>
+            <p>content</p>
+            <hr />
+            <h3>youtube title</h3>
+            <p>yt title</p>
+            <h4>Youtube Link</h4>
+            <a href="#">link</a>
+          </article>
+        </section>
       </div>
     </main>
 

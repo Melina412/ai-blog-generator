@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="./style/output.css" rel="stylesheet" />
     <title>AI Blog Generator</title>
   </head>
-  <body>
-    <header>
+  <body class="min-h-screen">
+    <header class="fixed top-0 w-full">
       <nav class="navbar bg-secondary text-secondary-content">
         <div class="flex-1">
           <a class="btn btn-secondary text-xl">AI Blog Generator</a>
@@ -29,8 +29,8 @@
       </nav>
     </header>
 
-    <main class="flex flex-col min-h-screen">
-      <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+    <main class="flex flex-col pt-16 pb-14 overflow-hidden">
+      <div class="flex-grow container mx-auto mt-10 mb-10 px-4 sm:px-0">
         <article
           class="max-w-3xl p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto transition-transform transform hover:scale-105 flex flex-col">
           <!--$ intro section  -->
@@ -73,7 +73,7 @@
     </main>
 
     <footer
-      class="footer footer-center p-4 bg-neutral dark:bg-base-300 text-neutral-content dark:text-base-content">
+      class="fixed bottom-0 footer footer-center p-4 bg-neutral dark:bg-base-300 text-neutral-content dark:text-base-content">
       <aside>
         <p>
           coded by
@@ -101,4 +101,4 @@
 </html>
 
 <!--# tailwind CLI build command: -->
-<!--# npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+<!--# npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch  -->
