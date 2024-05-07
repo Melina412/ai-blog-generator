@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-primary text-primary-content">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">AI Blog Generator</a>
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Logout</a></li>
+            <li>
+              <details>
+                <summary>Parent</summary>
+                <ul class="p-2 bg-base-100 rounded-t-none">
+                  <li><a>Link 1</a></li>
+                  <li><a>Link 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-col min-h-screen">
+      <div>
+        <div>
+          <div class="text-center">
+            <h2>Welcome to AI Blog Generator</h2>
+            <p>
+              Generate high-quality blog articles from YouTube videos using
+              artificial intelligence. Simply enter the link to the YouTube
+              video below and let the AI create the content for you!
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!--# tailwind CLI build command: -->
+<!--# npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
