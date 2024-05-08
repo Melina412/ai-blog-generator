@@ -9,11 +9,11 @@
 
 ### 2. tailwind CLI
 
-- npm i -D tailwind
+- npm i -D tailwindcss
 - tailwind.config.js erstellen
 - input.css file erstellen und hier @tailwind base; @tailwind components; @tailwind utilities; rein packen
 - output.css im html als stylesheet verlinken
-- tailind compiler starten mit dem command:
+- tailwind build compiler starten mit dem command:
   `npx tailwindcss -i <path>/input.css -o <path>/output.css --watch`
   zb.: npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch
 
@@ -68,7 +68,7 @@ def index(request):
 
 ```py
 # (unterordner)ai_blog_app -- urls.py
-# das ist das routing vom main prpoject, hier muss man die route angeben wo django nack der page suchen soll
+# das ist das routing vom main prpoject, hier muss man die route angeben wo django nach der page suchen soll
 
 from django.contrib import admin
 from django.urls import path, include
