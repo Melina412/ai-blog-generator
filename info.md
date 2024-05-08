@@ -33,12 +33,6 @@
 # 'blog_generator' hinzufügen
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
     'blog_generator'
 ]
 ```
@@ -78,3 +72,49 @@ urlpatterns = [
     path('', include('blog_generator.urls'))
 ]
 ```
+
+- neuen ordner 'templates' erstellen
+- hier werden die html files rein kopiert (lol?)
+
+```py
+# (unterordner)ai_blog_app -- settings.py
+# [BASE_DIR, 'templates'] ergänzen
+
+TEMPLATES = [
+    {
+        'DIRS': [BASE_DIR, 'templates'],
+    },
+]
+```
+
+- ich versuche erst mal die files so direkt aus dem frontend einzubinden. ka ob das so richtig ist, hoffe da gibts keine probleme beim deployment :/
+
+```py
+# (unterordner)ai_blog_app -- settings.py
+
+PROJECT_DIR = Path(__file__).resolve().parent.parent.parent.parent
+CSS_DIR = PROJECT_DIR / 'frontend' / 'src' / 'style'
+
+TEMPLATES = [
+    {
+        'DIRS': [BASE_DIR, '.././frontend/src'],
+    },
+]
+
+STATICFILES_DIRS = [
+    CSS_DIR,
+]
+```
+
+```html
+<!-- in den html files: -->
+<head>
+  {% load static %}
+  <link href="{% static 'output.css' %}" rel="stylesheet" />
+</head>
+```
+
+### django dev server starten
+
+- `python3 ai_blog_app/manage.py runserver` muss aus dem ordner in dem die env ist, also den pfad zur manage.py noch angeben
+- im browser den port `http://127.0.0.1:8000/` öffnen
