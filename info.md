@@ -121,8 +121,9 @@ STATICFILES_DIRS = [
 
 ### .env zugriff
 
+`pip install python-dotenv` mit os kann man nur auf die envs des systems zugreifen, nicht die aus der .env
+
 ```py
-pip install python-dotenv
 
 # (unterordner)ai_blog_app -- settings.py
 import os
@@ -137,6 +138,10 @@ print(get_random_secret_key())
 
 ### postgresql einrichten
 
+im tutorial wird das mit grovery gemacht aber das gefällt mir nicht. stattdessen habe ich **aiven** gefunden, ein cloud service mit einer forever free pgsql bis 5gb storage 🤑
+
+`pip install psycopg` das braucht man für die pg connection
+
 ```py
 # (unterordner)ai_blog_app -- settings.py
 
@@ -150,6 +155,26 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),
     }
 }
+```
+
+`python3 ai_blog_app/manage.py makemigrations`
+`python3 ai_blog_app/manage.py migrate`
+hiermit werden die django voreinstellungen in die db migriert
+
+### django admin panel
+
+einfach im browser aufrufen unter `http://127.0.0.1:8000/admin`
+
+admin erstellen: `python3 ai_blog_app/manage.py createsuperuser`
+
+```py
+# (unterordner)ai_blog_app -- settings.py
+
+```
+
+```py
+# (unterordner)ai_blog_app -- settings.py
+
 ```
 
 ```py

@@ -1528,21 +1528,33 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.fixed {
-  position: fixed;
+.static {
+  position: static;
 }
 
-.top-0 {
-  top: 0px;
+.fixed {
+  position: fixed;
 }
 
 .bottom-0 {
   bottom: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-4 {
@@ -1557,12 +1569,16 @@ html {
   margin-top: 2.5rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .flex {
   display: flex;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .min-h-screen {
@@ -1591,10 +1607,6 @@ html {
 
 .flex-grow {
   flex-grow: 1;
-}
-
-.border-separate {
-  border-collapse: separate;
 }
 
 .transform {
@@ -1636,35 +1648,12 @@ html {
   border-top-right-radius: 0px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border {
   border-width: 1px;
 }
 
 .border-solid {
   border-style: solid;
-}
-
-.border-secondary-content {
-  --tw-border-opacity: 1;
-  border-color: var(--fallback-sc,oklch(var(--sc)/var(--tw-border-opacity)));
-}
-
-.border-secondary {
-  --tw-border-opacity: 1;
-  border-color: var(--fallback-s,oklch(var(--s)/var(--tw-border-opacity)));
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-current {
-  border-color: currentColor;
 }
 
 .bg-base-200 {
@@ -1685,6 +1674,11 @@ html {
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -1714,19 +1708,6 @@ html {
   padding-bottom: 0.5rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
-}
-
 .pb-14 {
   padding-bottom: 3.5rem;
 }
@@ -1735,12 +1716,17 @@ html {
   padding-bottom: 0.75rem;
 }
 
-.pb-6 {
-  padding-bottom: 1.5rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -1751,21 +1737,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-accent {
