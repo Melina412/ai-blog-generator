@@ -118,3 +118,41 @@ STATICFILES_DIRS = [
 
 - `python3 ai_blog_app/manage.py runserver` muss aus dem ordner in dem die env ist, also den pfad zur manage.py noch angeben
 - im browser den port `http://127.0.0.1:8000/` öffnen
+
+### .env zugriff
+
+```py
+pip install python-dotenv
+
+# (unterordner)ai_blog_app -- settings.py
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+# Achtung! SECRET_KEY in settings.py muss auch geheim sein. ggf neuen erstellen:
+from django.core.management.utils import get_random_secret_key
+print(get_random_secret_key())
+
+```
+
+### postgresql einrichten
+
+```py
+# (unterordner)ai_blog_app -- settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+    }
+}
+```
+
+```py
+# (unterordner)ai_blog_app -- settings.py
+
+```
