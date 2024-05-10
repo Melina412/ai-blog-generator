@@ -2,5 +2,4 @@ frontend/node_modules
 backend/env
 **/*.env
 
-info.md
 backend/main.py

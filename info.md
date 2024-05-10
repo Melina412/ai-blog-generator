@@ -114,6 +114,8 @@ STATICFILES_DIRS = [
 </head>
 ```
 
+also die richtige variante laut django docs wäre im app folder sowohl den templates ordner und einen static ordner zu erstellen. die css files sind dann in `blog_generator/static/blog_generator/<file>`
+
 ### django dev server starten
 
 - `python3 ai_blog_app/manage.py runserver` muss aus dem ordner in dem die env ist, also den pfad zur manage.py noch angeben
