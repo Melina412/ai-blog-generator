@@ -1,0 +1,54 @@
+# Youtube Video to Blog Article Generator
+
+## Stack & Tools
+
+<div>
+<img src="https://img.shields.io/badge/Django-092E20.svg?style=for-the-badge&logo=Django&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" />
+<img src="https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white" />
+<img src="https://img.shields.io/badge/assemblyai-2048cb?style=for-the-badge" />
+<img src="https://img.shields.io/badge/aiven-fc4436?style=for-the-badge" />
+</div>
+
+## Features
+
+In this app a user can sign up and generate blog articles from Youtube videos simply by entering the video link. AssemblyAI generates a mp3 file from the audio which is then transcripted into text. OpenAI is used to write a blog style article based on the transcript. All generated articles are stored in a PostgreSQL for the user to access them later.
+
+Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-jNn8F5gm3Wbtcb) by [Code With Tomi](https://www.youtube.com/@CodeWithTomi).
+
+So basically with this app you can add/edit/delete todos and enjoy not getting blinded by the UI at night.
+
+## Preview
+
+<table>
+<tbody>
+
+<!--# 1. Reihe  ---------- -->
+<tr>
+
+<td align="center">
+<img src="./github/ai-blog-1.png"/>
+</td>
+
+<td align="center">
+<img src="./github/ai-blog-2.png"/>
+</td>
+
+</tr>
+
+<!--# 2. Reihe  ---------- -->
+<tr>
+
+<td align="center">
+<img>
+</td>
+
+<td align="center">
+
+</td>
+<img>
+</tr>
+
+</tbody>
+</table>

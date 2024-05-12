@@ -3,4 +3,5 @@ backend/env
 **/*.env
 .vscode
 
+info.md
 backend/main.py
