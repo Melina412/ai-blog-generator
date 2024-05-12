@@ -17,8 +17,6 @@ In this app a user can sign up and generate blog articles from Youtube videos si
 
 Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-jNn8F5gm3Wbtcb) by [Code With Tomi](https://www.youtube.com/@CodeWithTomi).
 
-So basically with this app you can add/edit/delete todos and enjoy not getting blinded by the UI at night.
-
 ## Preview
 
 <table>
