@@ -15,7 +15,10 @@
 - output.css im html als stylesheet verlinken
 - tailwind build compiler starten mit dem command:
   `npx tailwindcss -i <path>/input.css -o <path>/output.css --watch`
-  zb.: npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch
+  -- minify um den code auf eine zeile zu beschränken
+  zb.: npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css -- minify --watch
+
+(es ist trotzdem noch viel zu viel css code wtf tailwind?)
 
 ## django
 
