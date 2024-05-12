@@ -12,6 +12,7 @@ import openai
 from pytube import YouTube
 from dotenv import load_dotenv
 load_dotenv()
+from .models import BlogPost
 
 # Create your views here.
 @login_required
@@ -29,26 +30,32 @@ def generate_blog(request):
         except (KeyError, json.JSONDecodeError):
             return JsonResponse({'error': 'Invalid data send'}, status=400)
         
-        #todo get yt title
+        # get yt title
         title = yt_title(yt_link)
         print('title', title)
 
-        #todo get transcript
+        # get transcript with assemblyAI
         transcription = get_transcription(yt_link)
         if not transcription:
             return JsonResponse({'error': 'Failed to get transcript'}, status=500)
 
-        #todo generate blog with open AI
+        # generate blog with openAI
         blog_content = generate_blog_from_transcription(transcription)
         print('blog content: ', blog_content)
         if not blog_content:
              return JsonResponse({'error': 'Failed to generate blog article'}, status=500)
 
-        #todo save blog article to database
+        # save blog article to database
+        new_blog_article = BlogPost.objects.create(
+            user = request.user,
+            youtube_title = title,
+            youtube_link = yt_link,
+            generated_content = blog_content,
+        )
+        new_blog_article.save()
 
-        #todo return blog article as a response
-
-        print('blog_content: ', blog_content)
+        # return blog article as a response
+        # print('blog_content: ', blog_content)
         return JsonResponse({'content': blog_content})
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=405)
@@ -77,7 +84,7 @@ def get_transcription(link):
     transcriber = aai.Transcriber()
     transcript = transcriber.transcribe(audio_file)
 
-    print('transcript.text: ', transcript.text)
+    # print('transcript.text: ', transcript.text)
     return transcript.text
 
 def generate_blog_from_transcription(transcription):
@@ -96,8 +103,19 @@ def generate_blog_from_transcription(transcription):
 
     generated_content = response.choices[0].text.strip()
 
-    print(' generated_content: ',  generated_content)
+    # print(' generated_content: ',  generated_content)
     return generated_content
+    
+def blog_list(request):
+    blog_articles = BlogPost.objects.filter(user=request.user)
+    return render(request, 'blog-list.html', {'blog_articles': blog_articles})
+
+def blog_details(request, pk):
+    blog_article_detail = BlogPost.objects.get(id=pk)
+    if request.user == blog_article_detail.user:
+        return render(request, 'blog-details.html', {'blog_article_detail': blog_article_detail})
+    else:
+        return redirect('/')
     
 
 def user_login(request): # das kann nicht nur login heißen wegen der auth login von django

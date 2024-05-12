@@ -11,17 +11,16 @@
     <header class="fixed top-0 w-full">
       <nav class="navbar bg-secondary text-secondary-content">
         <div class="flex-1">
-          <a class="btn btn-secondary text-xl">AI Blog Generator</a>
+          <a href="/" class="btn btn-secondary text-xl">AI Blog Generator</a>
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1">
-            <li><a href="#">Saved Blog Posts</a></li>
+            <li><a href="/blog-list">Saved Blog Posts</a></li>
             <li>
               <details>
-                <summary>Login</summary>
+                <summary>Welcome {{ user.username }}</summary>
                 <ul class="p-2 bg-base-200 text-secondary rounded-t-none">
-                  <li><a href="#">Login</a></li>
-                  <li><a href="#">Signup</a></li>
+                  <li><a href="logout">Logout</a></li>
                 </ul>
               </details>
             </li>
@@ -35,14 +34,16 @@
         <section
           class="max-w-3xl p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto">
           <h1 class="text-3xl pb-3">Blog Posts</h1>
-          <article class="border border-solid rounded-lg p-2">
-            <h2 class="text-xl pb-3">blog title</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              quod eum, expedita commodi ipsa esse deleniti culpa illo error
-              dolore, eligendi amet et vero quia...
-            </p>
-          </article>
+
+          {% for article in blog_articles reversed %}
+
+          <a href="blog-details/{{ article.id }}">
+            <article class="border border-solid rounded-lg p-2">
+              <h2 class="text-xl pb-3">{{ article.youtube_title }}</h2>
+              <p>{{ article.generated_content|truncatechars:100 }}</p>
+            </article>
+          </a>
+          {% endfor %}
         </section>
       </div>
     </main>
