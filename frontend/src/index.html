@@ -62,12 +62,11 @@
           <!-- $ blog display section  -->
           <section>
             <h2 class="text-xl py-2">Generated Blog Article</h2>
-            <div id="blogContent">
-              <!--$ loading circle -->
-              <div id="loadingCircle" style="display: none">
-                <span class="loading loading-dots loading-md"></span>
-              </div>
+            <!--$ loading circle -->
+            <div id="loadingCircle" style="display: none">
+              <span class="loading loading-dots loading-md"></span>
             </div>
+            <div id="blogContent"></div>
           </section>
         </article>
       </div>
@@ -98,5 +97,8 @@
         </p>
       </aside>
     </footer>
+
+    {% load static %}
+    <script src="{% static 'index.js' %}"></script>
   </body>
 </html>

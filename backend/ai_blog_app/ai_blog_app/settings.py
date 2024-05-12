@@ -15,6 +15,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROJECT_DIR = Path(__file__).resolve().parent.parent.parent.parent
 CSS_DIR = PROJECT_DIR / 'frontend' / 'src' / 'style'
+JS_DIR = PROJECT_DIR / 'frontend' / 'src' / 'js'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -124,11 +125,15 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     CSS_DIR,
+    JS_DIR
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_URL = 'login' # damit der auth decorator weiß wohin er einenn navigieren soll
