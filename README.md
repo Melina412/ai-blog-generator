@@ -26,11 +26,11 @@ Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-
 <tr>
 
 <td align="center">
-<img src="./github/ai-blog-1.png"/>
+<img src="./github/ai-blog-preview-1.png"/>
 </td>
 
 <td align="center">
-<img src="./github/ai-blog-4.png"/>
+<img src="./github/ai-blog-preview-4.png"/>
 </td>
 
 </tr>
@@ -39,11 +39,11 @@ Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-
 <tr>
 
 <td align="center">
-<img src="./github/ai-blog-2.png"/>
+<img src="./github/ai-blog-preview-2.png"/>
 </td>
 
 <td align="center">
-<img src="./github/ai-blog-5.png"/>
+<img src="./github/ai-blog-preview-5.png"/>
 </td>
 </tr>
 
@@ -51,11 +51,11 @@ Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-
 <tr>
 
 <td align="center">
-<img src="./github/ai-blog-3.png"/>
+<img src="./github/ai-blog-preview-3.png"/>
 </td>
 
 <td align="center">
-<img src="./github/ai-blog-6.png"/>
+<img src="./github/ai-blog-preview-6.png"/>
 </td>
 </tr>
 
