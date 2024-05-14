@@ -26,7 +26,7 @@ def generate_blog(request):
             data = json.loads(request.body)
             print('req body:', request.body)
             yt_link = data['link'] # 'link' ist der name der json property beim fetch -- JSON.stringify({ link: youtubeLink }) 
-            # return JsonResponse({'content': yt_link})
+           
         except (KeyError, json.JSONDecodeError):
             return JsonResponse({'error': 'Invalid data send'}, status=400)
         
@@ -61,11 +61,13 @@ def generate_blog(request):
         return JsonResponse({'error': 'Invalid request method'}, status=405)
     
 def yt_title(link):
+    print('getting yt title...')
     yt = YouTube(link)    
     title = yt.title
     return title
 
 def download_audio(link):
+    print('downloading audio...')
     yt = YouTube(link)
     video = yt.streams.filter(only_audio=True).first()
     out_file = video.download(output_path=settings.MEDIA_ROOT)
@@ -76,9 +78,10 @@ def download_audio(link):
 
 
 def get_transcription(link):
+    print('getting transcription...')
     audio_file = download_audio(link)
     aai_key = os.getenv('AAI_API_KEY')
-    print('aai_key', aai_key)
+    # print('aai_key', aai_key)
     aai.settings.api_key = aai_key
 
     transcriber = aai.Transcriber()
@@ -88,6 +91,7 @@ def get_transcription(link):
     return transcript.text
 
 def generate_blog_from_transcription(transcription):
+    print('generating blog article...')
     openai.api_key = os.getenv('OPENAI_API_KEY')
 
 

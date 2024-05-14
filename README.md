@@ -30,7 +30,7 @@ Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-
 </td>
 
 <td align="center">
-<img src="./github/ai-blog-2.png"/>
+<img src="./github/ai-blog-4.png"/>
 </td>
 
 </tr>
@@ -39,13 +39,24 @@ Idea from [Python Backend Development Course](https://youtu.be/ftKiHCDVwfA?si=9-
 <tr>
 
 <td align="center">
-<img>
+<img src="./github/ai-blog-2.png"/>
 </td>
 
 <td align="center">
-
+<img src="./github/ai-blog-5.png"/>
 </td>
-<img>
+</tr>
+
+<!--# 3. Reihe  ---------- -->
+<tr>
+
+<td align="center">
+<img src="./github/ai-blog-3.png"/>
+</td>
+
+<td align="center">
+<img src="./github/ai-blog-6.png"/>
+</td>
 </tr>
 
 </tbody>

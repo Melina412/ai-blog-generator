@@ -8,10 +8,12 @@
     <title>AI Blog Generator</title>
   </head>
   <body class="min-h-screen">
-    <header class="fixed top-0 w-full">
+    <header class="fixed top-0 z-50 w-full">
       <nav class="navbar bg-secondary text-secondary-content">
         <div class="flex-1">
-          <a href="/" class="btn btn-secondary text-xl">AI Blog Generator</a>
+          <a href="/" class="btn btn-secondary text-xl shadow-none"
+            >AI Blog Generator</a
+          >
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1">
@@ -21,7 +23,7 @@
               <details>
                 <summary>Welcome {{ user.username }}</summary>
                 <ul class="p-2 bg-base-200 text-secondary rounded-t-none">
-                  <li><a href="logout">Logout</a></li>
+                  <li><a href="/logout">Logout</a></li>
                 </ul>
               </details>
             </li>
@@ -30,11 +32,12 @@
       </nav>
     </header>
 
-    <main class="flex flex-col pt-16 pb-14 overflow-hidden">
+    <main class="flex flex-col pt-16 pb-14">
       <div class="flex-grow container mx-auto mt-24 mb-10 px-4 sm:px-0">
         <article
           class="max-w-3xl p-6 rounded-lg bg-base-300 dark:bg-neutral shadow-md mx-auto transition-transform transform hover:scale-105 flex flex-col">
           <!--$ intro section  -->
+
           <section class="text-center mb-6">
             <h1 class="text-4xl mb-4">Welcome to AI Blog Generator</h1>
             <p>
@@ -45,6 +48,7 @@
           </section>
 
           <!--$ youtube section  -->
+
           <section class="mb-6">
             <h2 class="text-xl py-2">Enter Youtube Video Link</h2>
             <div class="flex space-x-4">
@@ -59,10 +63,13 @@
             </div>
           </section>
 
-          <!-- $ blog display section  -->
+          <!--$ blog display section  -->
+
           <section>
             <h2 class="text-xl py-2">Generated Blog Article</h2>
+
             <!--$ loading circle -->
+
             <div id="loadingCircle" style="display: none">
               <span class="loading loading-dots loading-md"></span>
             </div>

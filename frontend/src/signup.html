@@ -11,17 +11,19 @@
     <header class="fixed top-0 w-full">
       <nav class="navbar bg-secondary text-secondary-content">
         <div class="flex-1">
-          <a href="/" class="btn btn-secondary text-xl">AI Blog Generator</a>
+          <a href="/" class="btn btn-secondary text-xl shadow-none"
+            >AI Blog Generator</a
+          >
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1">
-            <li><a href="#">Saved Blog Posts</a></li>
+            <!-- <li><a href="#">Saved Blog Posts</a></li> -->
             <li>
               <details>
                 <summary>Login</summary>
                 <ul class="p-2 bg-base-200 text-secondary rounded-t-none">
-                  <li><a href="login">Login</a></li>
-                  <li><a href="signup">Signup</a></li>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/signup">Signup</a></li>
                 </ul>
               </details>
             </li>
@@ -44,7 +46,7 @@
             </div>
             {% endif %}
 
-            <h2 class="text-xl">Signup</h2>
+            <h2 class="text-xl font-semibold mb-2">Signup</h2>
 
             <div class="flex flex-col gap-1">
               <label for="username">Username</label>
