@@ -1,6 +1,6 @@
 document.getElementById('generateBlog').addEventListener('click', async () => {
   const youtubeLink = document.getElementById('youtubeLink').value;
-  console.log({ youtubeLink });
+  // console.log({ youtubeLink });
 
   const blogContent = document.getElementById('blogContent');
   const loadingCircle = document.getElementById('loadingCircle');
@@ -19,7 +19,7 @@ document.getElementById('generateBlog').addEventListener('click', async () => {
         body: JSON.stringify({ link: youtubeLink }),
       });
       const data = await response.json();
-      console.log({ data });
+      // console.log({ data });
       blogContent.innerHTML = data.content;
     } catch (error) {
       console.error('Error occurred:', error);
